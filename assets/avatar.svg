@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+      }
+
+      .cls-5 {
+        fill: #c7775c;
+      }
+
+      .cls-6 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .cls-7 {
+        filter: url(#drop-shadow-4);
+      }
+
+      .cls-2 {
+        stroke-linecap: round;
+        stroke-width: 11.02px;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke: #3d3d3d;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-8 {
+        filter: url(#drop-shadow-2);
+        font-family: BrittanySignatureRegular, 'Brittany Signature';
+        font-size: 40.92px;
+      }
+
+      .cls-8, .cls-9 {
+        fill: #f1f2f2;
+      }
+
+      .cls-3, .cls-4 {
+        stroke-width: 10.42px;
+      }
+
+      .cls-10, .cls-11 {
+        fill: #3d3d3d;
+      }
+
+      .cls-12 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-13 {
+        fill: #c9c9c9;
+      }
+
+      .cls-14 {
+        fill: #b76955;
+      }
+
+      .cls-4 {
+        stroke-linecap: square;
+      }
+
+      .cls-11 {
+        filter: url(#drop-shadow-3);
+      }
+
+      .cls-15 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" x="288.52" y="174.06" width="502.96" height="68.57"/>
+    </clipPath>
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="1.95" dy="1.95"/>
+      <feGaussianBlur result="blur" stdDeviation="3.9"/>
+      <feFlood flood-color="#000" flood-opacity=".3"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-2" filterUnits="userSpaceOnUse">
+      <feOffset dx="5.41" dy="5.41"/>
+      <feGaussianBlur result="blur-2" stdDeviation="4.33"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-3" filterUnits="userSpaceOnUse">
+      <feOffset dx="1.95" dy="1.95"/>
+      <feGaussianBlur result="blur-3" stdDeviation="3.9"/>
+      <feFlood flood-color="#000" flood-opacity=".3"/>
+      <feComposite in2="blur-3" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clippath-1">
+      <rect class="cls-1" width="1080" height="1080"/>
+    </clipPath>
+    <filter id="drop-shadow-4" filterUnits="userSpaceOnUse">
+      <feOffset dx="22.04" dy="22.04"/>
+      <feGaussianBlur result="blur-4" stdDeviation="22.04"/>
+      <feFlood flood-color="#000" flood-opacity=".3"/>
+      <feComposite in2="blur-4" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+  <g>
+    <g id="Layer_1">
+      <g>
+        <g class="cls-15">
+          <g class="cls-6">
+            <g>
+              <line class="cls-4" x1="373.67" y1="198.68" x2="381.65" y2="198.68"/>
+              <line class="cls-4" x1="373.67" y1="179.38" x2="400.61" y2="179.38"/>
+            </g>
+            <g>
+              <line class="cls-4" x1="701.32" y1="198.68" x2="693.34" y2="198.68"/>
+              <line class="cls-4" x1="701.32" y1="179.38" x2="674.38" y2="179.38"/>
+            </g>
+            <polyline class="cls-4" points="352.11 179.38 352.11 237.5 293.99 179.38 293.99 237.44"/>
+            <g>
+              <line class="cls-4" x1="743.88" y1="199.48" x2="752.59" y2="199.48"/>
+              <g>
+                <line class="cls-3" x1="722.47" y1="242.63" x2="722.47" y2="179.31"/>
+                <line class="cls-3" x1="789.03" y1="248.49" x2="760.4" y2="219.86"/>
+                <path class="cls-3" d="M722.47,179.52h34.29c11.08,0,20.07,8.99,20.07,20.07h0c0,11.08-8.99,20.07-20.07,20.07h-34.29v-40.14h0Z"/>
+              </g>
+            </g>
+            <g>
+              <polyline class="cls-4" points="368.36 245.23 439.54 174.06 508.28 242.8"/>
+              <polyline class="cls-4" points="482.05 245.14 439.74 202.83 396.89 245.68"/>
+            </g>
+            <g>
+              <polyline class="cls-4" points="562.44 246.55 634.93 174.06 705.7 244.83"/>
+              <polyline class="cls-4" points="676.99 244.69 635.14 202.83 591.96 246"/>
+            </g>
+            <g>
+              <polyline class="cls-4" points="464.46 169.71 537.38 242.63 610.94 169.07"/>
+              <polyline class="cls-4" points="582.62 168.82 537.59 213.86 492.58 168.85"/>
+            </g>
+          </g>
+          <text class="cls-8" transform="translate(460.55 218.68)"><tspan x="0" y="0">muhammed</tspan></text>
+        </g>
+        <polygon class="cls-11" points="540 299.14 553.77 275.28 526.23 275.28 540 299.14"/>
+      </g>
+      <g class="cls-12">
+        <g class="cls-7">
+          <g>
+            <polygon class="cls-9" points="770.72 1229.82 482.12 1229.82 482.12 914.75 598.08 914.75 770.72 1229.82"/>
+            <polygon class="cls-9" points="770.72 1229.82 598.08 914.75 598.08 1229.82 770.72 1229.82"/>
+            <polygon class="cls-9" points="309.48 1229.82 482.12 914.75 482.12 1229.82 309.48 1229.82"/>
+          </g>
+          <g>
+            <g>
+              <rect class="cls-14" x="294.11" y="669.14" width="76.76" height="134.63" rx="38.38" ry="38.38" transform="translate(-139.93 80.91) rotate(-11.48)"/>
+              <rect class="cls-14" x="709.13" y="669.14" width="76.76" height="134.63" rx="38.38" ry="38.38" transform="translate(1333.49 1606.96) rotate(-168.52)"/>
+            </g>
+            <circle class="cls-5" cx="540.68" cy="702.09" r="220.52"/>
+            <g>
+              <path class="cls-2" d="M650.5,671.19s-31.58-19.61-79.8-1.6"/>
+              <path class="cls-2" d="M514.55,671.19s-31.58-19.61-79.8-1.6"/>
+            </g>
+            <path class="cls-9" d="M487.56,681.5c-14.35-4.46-26.83-1.92-31.96,0-4.41,1.65-16.53,6.61-21.76,13.22-2.43,3.07-6.52,7.64-7.65,14.88-.28,1.82-1.55,9.89,3.17,16.52,2.3,3.22,4.98,4.75,9.16,6.9,10.19,5.23,25.9,13.77,28.65,14.88s12.67,6.89,20.66,6.89c7.99,0,20.11,2.48,28.65-6.89,11.99-13.15,5.05-35.11,4.41-36.91-7.61-21.48-29.79-28.37-33.33-29.48Z"/>
+            <path class="cls-10" d="M494.64,695.69c-1.8,0-3.52.3-5.13.84.75,1.62,1.18,3.42,1.18,5.32,0,6.87-5.45,12.44-12.26,12.67v17.43c0,8.96,7.26,16.22,16.22,16.22s16.22-7.26,16.22-16.22v-20.04c0-8.96-7.26-16.22-16.22-16.22Z"/>
+            <path class="cls-9" d="M592.44,681.5c14.35-4.46,26.83-1.92,31.96,0,4.41,1.65,16.53,6.61,21.76,13.22,2.43,3.07,6.52,7.64,7.65,14.88.28,1.82,1.55,9.89-3.17,16.52-2.3,3.22-4.98,4.75-9.16,6.9-10.19,5.23-25.9,13.77-28.65,14.88s-12.67,6.89-20.66,6.89-20.11,2.48-28.65-6.89c-11.99-13.15-5.05-35.11-4.41-36.91,7.61-21.48,29.79-28.37,33.33-29.48Z"/>
+            <path class="cls-10" d="M589.14,695.69c-1.8,0-3.52.3-5.13.84.75,1.62,1.18,3.42,1.18,5.32,0,6.87-5.45,12.44-12.26,12.67v17.43c0,8.96,7.26,16.22,16.22,16.22s16.22-7.26,16.22-16.22v-20.04c0-8.96-7.26-16.22-16.22-16.22Z"/>
+            <g>
+              <path class="cls-10" d="M718.14,575.27s18.69,30.85,25.98,61.43c7.29,30.58,6.47,72.73,11.42,80.99.25.41.82,1.28,1.66,1.37,6.24.63,17.57-42.39,19.88-68.49,1.77-20.01.99-61.22-34.02-113.84,0,0-27.47,18.16-26.36,26.15,1.1,7.99,1.44,12.4,1.44,12.4Z"/>
+              <path class="cls-10" d="M361.86,575.27s-18.69,30.85-25.98,61.43-6.47,72.73-11.42,80.99c-.25.41-.82,1.28-1.66,1.37-6.24.63-17.57-42.39-19.88-68.49-1.77-20.01-.99-61.22,34.02-113.84,0,0,27.47,18.16,26.36,26.15-1.1,7.99-1.44,12.4-1.44,12.4Z"/>
+            </g>
+            <g>
+              <rect class="cls-9" x="317.46" y="508.53" width="445.08" height="65.76" rx="32.88" ry="32.88"/>
+              <path class="cls-13" d="M516.9,337.03h46.21c94.65,0,171.5,76.85,171.5,171.5h-389.21c0-94.65,76.85-171.5,171.5-171.5Z"/>
+            </g>
+            <path class="cls-10" d="M482.12,914.75c12.94-4.5,33.18-9.85,58.38-9.75,24.89.1,44.89,5.49,57.73,10.03-38.65.11-77.46-.38-116.11-.28Z"/>
+            <path class="cls-10" d="M482.12,914.75s56.75,39.8,115.96.32"/>
+            <path class="cls-10" d="M540,883.88c9.13,0,16.53-7.4,16.53-16.53h-33.06c0,9.13,7.4,16.53,16.53,16.53Z"/>
+            <path class="cls-2" d="M586.77,830.67c-13.58,8.59-29.67,13.57-46.93,13.57s-33.1-4.9-46.61-13.37"/>
+            <path class="cls-2" d="M547.77,795.77c-2.26,1.43-4.93,2.25-7.8,2.25s-5.5-.81-7.74-2.22"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
