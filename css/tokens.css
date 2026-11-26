@@ -1,0 +1,139 @@
+/* ==========================================================================
+   NAVAR MP — MASTER DESIGN TOKENS
+   Dual-Theme Engine: Obsidian & Imperial Gold (Dark) & Warm Editorial (Light)
+   ========================================================================== */
+
+:root {
+  /* Default: Obsidian & Imperial Gold (Dark Luxury) */
+  --theme-name: 'dark';
+
+  /* Surface Colors */
+  --bg-base: #080B10;
+  --bg-surface-1: #0F141D;
+  --bg-surface-2: #16202E;
+  --bg-surface-3: #1F2C3F;
+  --bg-surface-elevated: #24344B;
+  --bg-glass: rgba(15, 20, 29, 0.78);
+  --bg-glass-strong: rgba(15, 20, 29, 0.94);
+  --bg-glass-subtle: rgba(15, 20, 29, 0.45);
+
+  /* Signature Gold Accents (Matched to Logo.svg) */
+  --accent-gold: #F0D000;
+  --accent-gold-rich: #D4AF37;
+  --accent-gold-soft: #E8C96A;
+  --accent-gold-bright: #FFE54C;
+  --accent-gold-subtle: rgba(240, 208, 0, 0.12);
+  --accent-gold-glow: rgba(240, 208, 0, 0.28);
+
+  /* Deep Royal Slate & Navy (from CV) */
+  --accent-navy: #1A3A5C;
+  --accent-navy-deep: #0D2440;
+  --accent-navy-glow: rgba(26, 58, 92, 0.5);
+
+  /* Typography Colors */
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --text-inverse: #080B10;
+  --text-gold: #F0D000;
+
+  /* Borders & Rules */
+  --border-subtle: rgba(240, 208, 0, 0.12);
+  --border-medium: rgba(240, 208, 0, 0.28);
+  --border-bold: rgba(240, 208, 0, 0.55);
+  --border-glass: rgba(255, 255, 255, 0.08);
+
+  /* Status Colors */
+  --status-available: #10B981;
+  --status-available-glow: rgba(16, 185, 129, 0.35);
+
+  /* Depth & Shadows */
+  --glow-gold-sm: 0 0 15px rgba(240, 208, 0, 0.25);
+  --glow-gold-lg: 0 0 45px -5px rgba(240, 208, 0, 0.35);
+  --shadow-card: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(240, 208, 0, 0.1);
+  --shadow-card-hover: 0 30px 60px -15px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(240, 208, 0, 0.35), 0 0 30px rgba(240, 208, 0, 0.15);
+  --shadow-dropdown: 0 25px 50px -12px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(240, 208, 0, 0.2);
+
+  /* Gradients */
+  --grad-gold: linear-gradient(135deg, #F0D000 0%, #D4AF37 50%, #E8C96A 100%);
+  --grad-gold-text: linear-gradient(135deg, #FFFFFF 20%, #F0D000 70%, #D4AF37 100%);
+  --grad-surface: linear-gradient(180deg, rgba(22, 32, 46, 0.6) 0%, rgba(15, 20, 29, 0.8) 100%);
+  --grad-navy-gold: linear-gradient(135deg, #0D2440 0%, #1A3A5C 60%, rgba(240, 208, 0, 0.2) 100%);
+
+  /* Typography Scales */
+  --font-display: 'Syne', -apple-system, sans-serif;
+  --font-editorial: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'DM Mono', monospace;
+
+  /* Layout Scales */
+  --container-max: 1280px;
+  --container-narrow: 880px;
+  --header-height: 76px;
+
+  /* Border Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 36px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --trans-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --trans-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --trans-slow: 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  --trans-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ==========================================================================
+   Light Mode Override: Warm Editorial Cream Paper Aesthetic (Echoing CV)
+   ========================================================================== */
+[data-theme="light"] {
+  --theme-name: 'light';
+
+  --bg-base: #FAF8F5;
+  --bg-surface-1: #FFFFFF;
+  --bg-surface-2: #F2ECE4;
+  --bg-surface-3: #E8E2D8;
+  --bg-surface-elevated: #E0D8CB;
+  --bg-glass: rgba(250, 248, 245, 0.86);
+  --bg-glass-strong: rgba(250, 248, 245, 0.96);
+  --bg-glass-subtle: rgba(250, 248, 245, 0.55);
+
+  --accent-gold: #B8860B;
+  --accent-gold-rich: #996515;
+  --accent-gold-soft: #D4A843;
+  --accent-gold-bright: #C9961A;
+  --accent-gold-subtle: rgba(184, 134, 11, 0.12);
+  --accent-gold-glow: rgba(184, 134, 11, 0.22);
+
+  --accent-navy: #1A3A5C;
+  --accent-navy-deep: #0D2440;
+  --accent-navy-glow: rgba(26, 58, 92, 0.25);
+
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --text-muted: #64748B;
+  --text-inverse: #FAF8F5;
+  --text-gold: #996515;
+
+  --border-subtle: rgba(26, 58, 92, 0.12);
+  --border-medium: rgba(184, 134, 11, 0.32);
+  --border-bold: rgba(184, 134, 11, 0.6);
+  --border-glass: rgba(0, 0, 0, 0.08);
+
+  --status-available: #059669;
+  --status-available-glow: rgba(5, 150, 105, 0.25);
+
+  --glow-gold-sm: 0 0 15px rgba(184, 134, 11, 0.2);
+  --glow-gold-lg: 0 0 45px -5px rgba(184, 134, 11, 0.25);
+  --shadow-card: 0 12px 35px -8px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(216, 208, 200, 0.7);
+  --shadow-card-hover: 0 24px 50px -12px rgba(15, 23, 42, 0.15), 0 0 0 1px rgba(184, 134, 11, 0.4), 0 0 25px rgba(184, 134, 11, 0.12);
+  --shadow-dropdown: 0 20px 40px -10px rgba(15, 23, 42, 0.15), 0 0 0 1px rgba(184, 134, 11, 0.25);
+
+  --grad-gold: linear-gradient(135deg, #B8860B 0%, #D4A843 50%, #996515 100%);
+  --grad-gold-text: linear-gradient(135deg, #0F172A 20%, #B8860B 75%, #996515 100%);
+  --grad-surface: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(242, 236, 228, 0.9) 100%);
+  --grad-navy-gold: linear-gradient(135deg, #F2ECE4 0%, #FAF8F5 60%, rgba(184, 134, 11, 0.15) 100%);
+}

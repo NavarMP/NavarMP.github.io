@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muḥammed Navār — Creative Technologist, Web Developer & Designer</title>
+  
+  <!-- Meta & SEO Optimization -->
+  <meta name="description" content="Portfolio of Muḥammed Navār (NavarMP) — Creative Technologist, Full-Stack Web Developer & Visual / UI/UX Designer. Bridging architectural engineering and visual poetry.">
+  <meta name="keywords" content="Muhammed Navar, NavarMP, Creative Technologist, Full Stack Developer, Web Designer, UI/UX, Next.js, React, Supabase, GSAP, Kerala, India">
+  <meta name="author" content="Muḥammed Navār">
+  <meta name="theme-color" content="#080B10">
+  <link rel="canonical" href="https://NavarMP.github.io/">
+
+  <!-- Open Graph & Social Cards -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://NavarMP.github.io/">
+  <meta property="og:title" content="Muḥammed Navār — Creative Technologist & Full-Stack Developer">
+  <meta property="og:description" content="Bridging architectural engineering and visual poetry. Explore full-stack web platforms, progressive web apps, and brand design systems.">
+  <meta property="og:image" content="https://NavarMP.github.io/assets/Portrait.webp">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@Navar_MP">
+  <meta name="twitter:creator" content="@Navar_MP">
+  <meta name="twitter:title" content="Muḥammed Navār — Creative Technologist">
+  <meta name="twitter:description" content="Bridging engineering precision and visual artistry. Next.js, Supabase, UI/UX, and typography.">
+  <meta name="twitter:image" content="https://NavarMP.github.io/assets/Portrait.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/Logo.svg">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- Schema.org Person JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Muḥammed Navār",
+    "alternateName": "Navar MP",
+    "url": "https://NavarMP.github.io",
+    "image": "https://NavarMP.github.io/assets/Portrait.webp",
+    "jobTitle": "Creative Technologist & Full-Stack Developer",
+    "email": "mailto:NavarMP@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Kerala",
+      "addressCountry": "India"
+    },
+    "sameAs": [
+      "https://github.com/NavarMP",
+      "https://linkedin.com/in/NavarMP",
+      "https://www.behance.net/NavarMP",
+      "https://t.me/NavarMP",
+      "https://instagram.com/Navar_MP",
+      "https://x.com/Navar_MP",
+      "https://www.facebook.com/NavarMP",
+      "https://www.youtube.com/@NavarMP"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Cinematic Preloader -->
+  <div id="preloader" role="progressbar" aria-label="Loading assets">
+    <img src="assets/Logo.svg" alt="Navar Logo" class="preloader-brand">
+    <div class="preloader-bar-wrap">
+      <div class="preloader-bar-fill"></div>
+    </div>
+    <div class="preloader-counter">00%</div>
+  </div>
+
+  <!-- Custom Magnetic Cursor Elements -->
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" aria-hidden="true">
+    <span class="cursor-text"></span>
+  </div>
+
+  <!-- Background Particle Canvas -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <!-- Floating Glass HUD Navigation Dock -->
+  <header class="site-header" role="banner">
+    <nav class="nav-dock" aria-label="Primary Navigation">
+      <a href="#hero" class="nav-logo" aria-label="Muḥammed Navār Home">
+        <img src="assets/Logo.svg" alt="Logo" class="nav-logo-icon">
+        <span class="nav-logo-text">NAVĀR<span>.</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#philosophy" class="nav-link">Craft</a></li>
+        <li><a href="#works" class="nav-link">Works</a></li>
+        <li><a href="#skills" class="nav-link">Matrix</a></li>
+        <li><a href="#timeline" class="nav-link">Journey</a></li>
+        <li><a href="#contact" class="nav-link">Connect</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Interactive CV Modal Trigger -->
+        <button class="btn btn-secondary" data-action="open-cv" style="padding: 0.45rem 1rem; font-size: 0.825rem;" aria-label="View interactive Curriculum Vitae">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          CV
+        </button>
+
+        <!-- Command Palette Trigger -->
+        <button class="cmd-shortcut-tag" data-action="open-cmd" aria-label="Open command palette (Press Command + K)">
+          <span>⌘</span>K
+        </button>
+
+        <!-- Audio Synthesizer Toggle -->
+        <button id="audio-toggle-btn" class="hud-btn" aria-label="Toggle sound feedback">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+        </button>
+
+        <!-- Theme Toggle (Dark / Light) -->
+        <button id="theme-toggle-btn" class="hud-btn" aria-label="Toggle theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-open" class="hud-btn mobile-menu-btn" aria-label="Open navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <ul class="mobile-drawer-links">
+      <li><a href="#hero" class="mobile-drawer-link">Home</a></li>
+      <li><a href="#philosophy" class="mobile-drawer-link">Craft & Philosophy</a></li>
+      <li><a href="#works" class="mobile-drawer-link">Selected Works</a></li>
+      <li><a href="#skills" class="mobile-drawer-link">Capabilities</a></li>
+      <li><a href="#timeline" class="mobile-drawer-link">Milestones</a></li>
+      <li><a href="#contact" class="mobile-drawer-link">Connect</a></li>
+    </ul>
+    <div class="mobile-drawer-actions">
+      <button class="btn btn-primary" data-action="open-cv">View Interactive CV</button>
+      <button id="mobile-menu-close" class="btn btn-secondary">Close Menu</button>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- -----------------------------------------------------------------------
+         HERO SECTION
+         ----------------------------------------------------------------------- -->
+    <section id="hero" class="section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Narrative Copy -->
+          <div class="hero-content">
+            <div class="hero-badge-wrap">
+              <span class="section-eyebrow">Creative Technologist</span>
+            </div>
+
+            <h1 class="hero-title">
+              Muḥammed
+              <span class="name-highlight">Navār</span>
+            </h1>
+
+            <div class="hero-role">
+              Full-Stack Developer & UI/UX Designer
+            </div>
+
+            <p class="hero-bio">
+              Bridging the gap between <strong>architectural engineering</strong> and <strong>visual poetry</strong>. Designing and developing production-grade web systems, high-touch progressive web applications, and enduring brand identities from Kerala, India.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#works" class="btn btn-primary">
+                Explore Selected Works
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+
+              <button class="btn btn-secondary" data-action="open-cv">
+                Launch Curriculum Vitae
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </button>
+
+              <button id="whatsapp-quick-btn" class="btn btn-glass" aria-label="Direct message via WhatsApp">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                WhatsApp Chat
+              </button>
+            </div>
+
+            <!-- Stats Ribbon -->
+            <div class="stats-ribbon">
+              <div class="stat-item">
+                <span class="stat-num">4+</span>
+                <span class="stat-label">Years of Practice</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">15+</span>
+                <span class="stat-label">Web & Brand Works</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Design-to-Code Delivery</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">BCA</span>
+                <span class="stat-label">Calicut University</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual & 3D Tilt Frame -->
+          <div class="hero-visual">
+            <div class="geometric-accent" aria-hidden="true"></div>
+            <div class="portrait-container">
+              <div class="portrait-tilt-card">
+                <picture>
+                  <source srcset="assets/Portrait.webp" type="image/webp">
+                  <img src="assets/Portrait.png" alt="Muḥammed Navār — Creative Technologist" class="portrait-img" loading="eager" width="1698" height="2264">
+                </picture>
+                <div class="portrait-glare"></div>
+                <div class="portrait-badge">
+                  <span class="pulse-beacon"></span>
+                  <span>Open for Opportunities · 2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         PHILOSOPHY SECTION ("The Dual Craft")
+         ----------------------------------------------------------------------- -->
+    <section id="philosophy" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Philosophy</span>
+          <h2 class="section-title">The Convergence of <span class="gold-gradient-text">Code & Craft</span></h2>
+          <p class="section-subtitle">
+            Most digital projects suffer from a communication divide between engineering logic and artistic vision. I unite both disciplines to deliver seamless, memorable, and high-performance products.
+          </p>
+        </div>
+
+        <div class="philosophy-grid">
+          <!-- Pillar 1 -->
+          <div class="philosophy-card">
+            <div class="pillar-head">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16.5 9.4 7.55 4.24a1.78 1.78 0 0 0-2.5 1.55v12.42a1.78 1.78 0 0 0 2.5 1.55L16.5 14.6a1.78 1.78 0 0 0 0-3.2z"/></svg>
+              </div>
+              <span class="pillar-num">01</span>
+            </div>
+            <h3 class="pillar-title">Full-Cycle Architecture</h3>
+            <p class="pillar-desc">
+              From whiteboard concept and relational database schema design to Next.js full-stack implementation, delivering unified end-to-end execution.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="philosophy-card">
+            <div class="pillar-head">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              </div>
+              <span class="pillar-num">02</span>
+            </div>
+            <h3 class="pillar-title">UI/UX Craftsmanship</h3>
+            <p class="pillar-desc">
+              Ergonomic layouts, thoughtful spatial hierarchies, and responsive thumb-zone navigation optimized for real human workflows.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="philosophy-card">
+            <div class="pillar-head">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+              </div>
+              <span class="pillar-num">03</span>
+            </div>
+            <h3 class="pillar-title">Typographic Mastery</h3>
+            <p class="pillar-desc">
+              Bilingual type design expertise spanning Latin, Malayalam, and Arabic scripts — creating visual rhythm with editorial elegance.
+            </p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="philosophy-card">
+            <div class="pillar-head">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <span class="pillar-num">04</span>
+            </div>
+            <h3 class="pillar-title">Velocity & Agility</h3>
+            <p class="pillar-desc">
+              Rapid adoption of next-generation frameworks, cloud databases, and motion tools to turn ambitious concepts into reality without drag.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SELECTED WORKS SECTION
+         ----------------------------------------------------------------------- -->
+    <section id="works" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Portfolio</span>
+          <h2 class="section-title">Selected <span class="gold-gradient-text">Systems & Works</span></h2>
+          <p class="section-subtitle">
+            A curated showcase of full-stack web platforms, progressive web applications, and brand identity projects.
+          </p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="project-filters" role="tablist" aria-label="Project Categories">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Works</button>
+          <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Web Applications</button>
+          <button class="filter-btn" data-filter="design" role="tab" aria-selected="false">Brand & Visual Design</button>
+        </div>
+
+        <!-- Dynamic Projects Grid -->
+        <div id="projects-container" class="projects-grid">
+          <!-- Populated by js/app.js from js/data/projects.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SKILLS & TECHNOLOGIES MATRIX
+         ----------------------------------------------------------------------- -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Capabilities</span>
+          <h2 class="section-title">Technical Matrix & <span class="gold-gradient-text">Toolchain</span></h2>
+          <p class="section-subtitle">
+            Measured proficiency across modern web engineering, database architecture, design software, and multilingual communication.
+          </p>
+        </div>
+
+        <!-- Category Grid with animated bars -->
+        <div id="skills-container" class="skills-layout">
+          <!-- Populated by js/app.js from js/data/skills.js -->
+        </div>
+
+        <!-- Technology Cloud Pills -->
+        <div style="margin-top: 3.5rem; text-align: center;">
+          <h3 style="font-family: var(--font-mono); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); margin-bottom: 1.25rem;">
+            Ecosystem & Tooling Stack
+          </h3>
+          <div id="skills-cloud-container" class="skill-tags-grid" style="justify-content: center;">
+            <!-- Populated by js/app.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         EXPERIENCE & MILESTONES TIMELINE
+         ----------------------------------------------------------------------- -->
+    <section id="timeline" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Trajectory</span>
+          <h2 class="section-title">Career & Academic <span class="gold-gradient-text">Milestones</span></h2>
+          <p class="section-subtitle">
+            A timeline of academic foundations and freelance design-to-code practice across Kerala and remote clients.
+          </p>
+        </div>
+
+        <div id="timeline-container" class="timeline-wrap">
+          <!-- Populated by js/app.js from js/data/timeline.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         OMNICHANNEL SOCIAL HUB & CONTACT SECTION
+         ----------------------------------------------------------------------- -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Connect</span>
+          <h2 class="section-title">Initiate a Conversation & <span class="gold-gradient-text">Collaborate</span></h2>
+          <p class="section-subtitle">
+            Open for freelance commissions, technical consulting, and innovative product builds. Reach out directly across any of the channels below.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          
+          <!-- Channels Directory -->
+          <div>
+            <div class="contact-channels-header">
+              <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--text-primary);">Omnichannel Touchpoints</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary);">Direct messaging, developer repositories, design portfolios & social hubs:</p>
+            </div>
+
+            <div class="channels-grid">
+              <!-- WhatsApp -->
+              <a href="https://api.whatsapp.com/send?phone=919746902268" target="_blank" rel="noopener noreferrer" class="channel-card">
+                <div class="channel-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-name">WhatsApp</span>
+                  <span class="channel-handle">+91 9746902268</span>
+                </div>
+              </a>
+
+              <!-- Telegram -->
+              <a href="https://t.me/NavarMP" target="_blank" rel="noopener noreferrer" class="channel-card">
+                <div class="channel-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-name">Telegram</span>
+                  <span class="channel-handle">@NavarMP</span>
+                </div>
+              </a>
+
+              <!-- Email Direct & Copy -->
+              <a href="mailto:NavarMP@gmail.com" id="copy-email-btn" class="channel-card">
+                <div class="channel-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-name">E-Mail (Click to Copy)</span>
+                  <span class="channel-handle">NavarMP@gmail.com</span>
+                </div>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com/in/NavarMP" target="_blank" rel="noopener noreferrer" class="channel-card">
+                <div class="channel-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-name">LinkedIn</span>
+                  <span class="channel-handle">/in/NavarMP</span>
+                </div>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/NavarMP" target="_blank" rel="noopener noreferrer" class="channel-card">
+                <div class="channel-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"></path></svg>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-name">GitHub</span>
+                  <span class="channel-handle">@NavarMP</span>
+                </div>
+              </a>
+
+              <!-- Behance -->
+              <a href="https://www.behance.net/NavarMP" target="_blank" rel="noopener noreferrer" class="channel-card">
+                <div class="channel-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h6a3 3 0 0 1 0 6H3z"/><path d="M3 14h7a3 3 0 0 1 0 6H3z"/><line x1="15" y1="8" x2="21" y2="8"/><path d="M21 15a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-name">Behance</span>
+                  <span class="channel-handle">/NavarMP</span>
+                </div>
+              </a>
+
+              <!-- Instagram -->
+              <a href="https://instagram.com/Navar_MP" target="_blank" rel="noopener noreferrer" class="channel-card">
+                <div class="channel-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-name">Instagram</span>
+                  <span class="channel-handle">@Navar_MP</span>
+                </div>
+              </a>
+
+              <!-- YouTube -->
+              <a href="https://www.youtube.com/@NavarMP" target="_blank" rel="noopener noreferrer" class="channel-card">
+                <div class="channel-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-name">YouTube</span>
+                  <span class="channel-handle">@NavarMP</span>
+                </div>
+              </a>
+
+              <!-- X / Twitter -->
+              <a href="https://x.com/Navar_MP" target="_blank" rel="noopener noreferrer" class="channel-card">
+                <div class="channel-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-name">X (Twitter)</span>
+                  <span class="channel-handle">@Navar_MP</span>
+                </div>
+              </a>
+
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/NavarMP" target="_blank" rel="noopener noreferrer" class="channel-card">
+                <div class="channel-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-name">Facebook</span>
+                  <span class="channel-handle">/NavarMP</span>
+                </div>
+              </a>
+            </div>
+
+            <!-- vCard One-Click Download -->
+            <div style="margin-top: 1.5rem;">
+              <button id="download-vcard-btn" class="btn btn-secondary" style="width: 100%;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Download vCard (.vcf Contact File)
+              </button>
+            </div>
+          </div>
+
+          <!-- Contact Form Card -->
+          <div class="contact-form-card">
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Send a Direct Message</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.75rem;">
+              Fill in your project brief or inquiry. Messages route with instant confirmation:
+            </p>
+
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="form-name" class="form-label">Your Name</label>
+                <input type="text" id="form-name" class="form-input" placeholder="e.g. Alex Morgan" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">Your Email</label>
+                <input type="email" id="form-email" class="form-input" placeholder="alex@domain.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Subject</label>
+                <input type="text" id="form-subject" class="form-input" placeholder="Project Inquiry / Collaboration" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message & Project Scope</label>
+                <textarea id="form-message" class="form-textarea" placeholder="Describe your vision, timeline, and goals..." required></textarea>
+              </div>
+
+              <div class="form-actions-row">
+                <button type="submit" class="btn btn-primary" style="flex: 1;">
+                  Send Message
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- -------------------------------------------------------------------------
+       SITE FOOTER
+       ------------------------------------------------------------------------- -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="#hero" class="nav-logo" style="margin-bottom: 0.75rem;">
+            <img src="assets/Logo.svg" alt="Navar Logo" class="nav-logo-icon" style="width: 32px; height: 32px;">
+            <span class="nav-logo-text" style="font-size: 1.25rem;">MUḤAMMED NAVĀR</span>
+          </a>
+          <p style="font-size: 0.925rem; color: var(--text-secondary); max-width: 420px;">
+            Creative Technologist bridging engineering precision and visual artistry. Published globally on GitHub Pages.
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="#hero" class="btn btn-glass" style="font-size: 0.825rem; padding: 0.6rem 1.2rem;">Back to Top ↑</a>
+          <button class="btn btn-secondary" data-action="open-cv" style="font-size: 0.825rem; padding: 0.6rem 1.2rem;">Curriculum Vitae</button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="local-time-clock">
+          <span class="local-time-dot"></span>
+          <span id="live-time-display">Kerala, India (IST): 00:00:00</span>
+        </div>
+
+        <div>
+          <span>© 2026 Muḥammed Navār. All Rights Reserved. Crafted with care.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- -------------------------------------------------------------------------
+       INTERACTIVE CV MODAL ENGINE
+       ------------------------------------------------------------------------- -->
+  <div id="cv-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Curriculum Vitae Viewer">
+    <div class="modal-box" style="max-width: 900px;">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <h2 class="modal-title">Curriculum Vitae · Muḥammed Navār</h2>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <button id="cv-print-btn" class="btn btn-secondary" style="padding: 0.4rem 0.85rem; font-size: 0.78rem;" title="Print clean PDF">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px;"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            Print PDF
+          </button>
+          <button id="cv-copy-ats-btn" class="btn btn-secondary" style="padding: 0.4rem 0.85rem; font-size: 0.78rem;" title="Copy plain text ATS resume">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Copy ATS Text
+          </button>
+          <button id="cv-download-btn" class="btn btn-primary" style="padding: 0.4rem 0.85rem; font-size: 0.78rem;" title="Download CV Document">
+            Download File
+          </button>
+          <button id="cv-modal-close" class="modal-close-btn" aria-label="Close CV viewer">✕</button>
+        </div>
+      </div>
+      <div class="modal-body" style="background: var(--bg-surface-2); padding: clamp(1.5rem, 3vw, 2.5rem);">
+        <!-- Embedded High-Fidelity Paper Representation mirroring navar_cv.html -->
+        <div class="cv-preview-paper">
+          <div style="border-bottom: 2px solid #1a3a5c; padding-bottom: 1.5rem; margin-bottom: 1.75rem; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <h1 style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.2rem; color: #1a3a5c; margin-bottom: 0.25rem;">Muḥammed Navār</h1>
+              <p style="font-family: 'DM Mono', monospace; font-size: 0.85rem; color: #b8860b; text-transform: uppercase; letter-spacing: 0.1em;">
+                Creative Technologist · Full-Stack Web Developer & Graphic Designer
+              </p>
+            </div>
+            <div style="font-size: 0.85rem; color: #4a4a4a; line-height: 1.6; text-align: right;">
+              <div>Kerala, India</div>
+              <div><a href="mailto:NavarMP@gmail.com" style="color: #1a3a5c; text-decoration: none;">NavarMP@gmail.com</a></div>
+              <div><a href="https://NavarMP.github.io" target="_blank" style="color: #1a3a5c; text-decoration: none;">NavarMP.github.io</a></div>
+            </div>
+          </div>
+
+          <!-- Section 01: Profile -->
+          <div style="margin-bottom: 1.75rem;">
+            <h3 style="font-family: 'DM Mono', monospace; font-size: 0.85rem; color: #1a3a5c; text-transform: uppercase; letter-spacing: 0.15em; border-bottom: 1px solid #d8d0c8; padding-bottom: 0.35rem; margin-bottom: 0.75rem;">01 · Profile</h3>
+            <p style="font-size: 0.925rem; color: #4a4a4a; line-height: 1.75;">
+              A creative technologist who bridges the gap between engineering precision and visual artistry. With a foundation in modern web technologies and a refined eye for design, I craft digital products that perform as beautifully as they look — from full-stack Next.js applications to polished brand identities.
+            </p>
+          </div>
+
+          <!-- Section 02: Featured Projects -->
+          <div style="margin-bottom: 1.75rem;">
+            <h3 style="font-family: 'DM Mono', monospace; font-size: 0.85rem; color: #1a3a5c; text-transform: uppercase; letter-spacing: 0.15em; border-bottom: 1px solid #d8d0c8; padding-bottom: 0.35rem; margin-bottom: 0.75rem;">02 · Featured Projects</h3>
+            <div style="margin-bottom: 1rem;">
+              <strong style="color: #1a3a5c; font-size: 1rem;">Arivolam — Educational Management Platform</strong>
+              <div style="font-family: 'DM Mono', monospace; font-size: 0.75rem; color: #8b4513; margin-bottom: 0.25rem;">Next.js · Supabase · PostgreSQL · Auth & RBAC</div>
+              <p style="font-size: 0.88rem; color: #4a4a4a; line-height: 1.6;">All-in-one educational platform with role-based access control, gradebook computation, and student tracking.</p>
+            </div>
+            <div style="margin-bottom: 1rem;">
+              <strong style="color: #1a3a5c; font-size: 1rem;">Attar al Jannah — Luxury E-Commerce PWA</strong>
+              <div style="font-family: 'DM Mono', monospace; font-size: 0.75rem; color: #8b4513; margin-bottom: 0.25rem;">Next.js 15 · Supabase · Razorpay API · GSAP Motion</div>
+              <p style="font-size: 0.88rem; color: #4a4a4a; line-height: 1.6;">Progressive web app featuring Islamic-inspired glassmorphism, Razorpay payments, and student sales gamification.</p>
+            </div>
+            <div>
+              <strong style="color: #1a3a5c; font-size: 1rem;">Personal Flagship Ecosystem (NavarMP.github.io)</strong>
+              <div style="font-family: 'DM Mono', monospace; font-size: 0.75rem; color: #8b4513; margin-bottom: 0.25rem;">Modern Web Architecture · WebGL Canvas · Web Audio API</div>
+              <p style="font-size: 0.88rem; color: #4a4a4a; line-height: 1.6;">100/100 Lighthouse benchmark portfolio with zero framework bloat and tactile feedback.</p>
+            </div>
+          </div>
+
+          <!-- Section 03: Experience -->
+          <div style="margin-bottom: 1.75rem;">
+            <h3 style="font-family: 'DM Mono', monospace; font-size: 0.85rem; color: #1a3a5c; text-transform: uppercase; letter-spacing: 0.15em; border-bottom: 1px solid #d8d0c8; padding-bottom: 0.35rem; margin-bottom: 0.75rem;">03 · Freelance Experience</h3>
+            <div>
+              <div style="display: flex; justify-content: space-between;">
+                <strong style="color: #1a3a5c;">Graphic Designer & Web Developer (Independent Practice)</strong>
+                <span style="font-family: 'DM Mono', monospace; font-size: 0.8rem; color: #737373;">2022 — Present</span>
+              </div>
+              <div style="font-style: italic; color: #b8860b; font-size: 0.85rem; margin-bottom: 0.35rem;">Kerala, India & Remote</div>
+              <p style="font-size: 0.88rem; color: #4a4a4a; line-height: 1.6;">
+                Delivered visual design solutions, posters, event branding, and production web applications for diverse clients. Known for striking compositions, cohesive palettes, and on-time delivery.
+              </p>
+            </div>
+          </div>
+
+          <!-- Section 04: Education -->
+          <div>
+            <h3 style="font-family: 'DM Mono', monospace; font-size: 0.85rem; color: #1a3a5c; text-transform: uppercase; letter-spacing: 0.15em; border-bottom: 1px solid #d8d0c8; padding-bottom: 0.35rem; margin-bottom: 0.75rem;">04 · Education</h3>
+            <div>
+              <strong style="color: #1a3a5c;">Bachelor of Computer Applications (BCA) (2023 — 2026)</strong>
+              <div style="font-size: 0.88rem; color: #4a4a4a;">SAFI Institute of Advanced Study, Vazhayur · Calicut University, Kerala</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- -------------------------------------------------------------------------
+       CASE STUDY DETAIL MODAL
+       ------------------------------------------------------------------------- -->
+  <div id="project-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Project Case Study Detail">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2 class="modal-title">Case Study Deep Dive</h2>
+        <button id="project-modal-close" class="modal-close-btn" aria-label="Close Case Study">✕</button>
+      </div>
+      <div id="project-modal-content" class="modal-body">
+        <!-- Injected dynamically by js/modules/modal-projects.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- -------------------------------------------------------------------------
+       COMMAND PALETTE DIALOG (Cmd+K)
+       ------------------------------------------------------------------------- -->
+  <div id="command-palette" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Command Palette">
+    <div class="modal-box cmd-palette-box">
+      <div class="cmd-input-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="cmd-search-input" class="cmd-input" placeholder="Type a command, project, or section..." autocomplete="off">
+        <span class="cmd-shortcut-tag">ESC</span>
+      </div>
+      <ul id="cmd-results-list" class="cmd-results-list">
+        <!-- Injected dynamically by js/modules/command-palette.js -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- -------------------------------------------------------------------------
+       KEYBOARD SHORTCUTS CHEAT SHEET (?)
+       ------------------------------------------------------------------------- -->
+  <div id="shortcuts-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Keyboard Shortcuts">
+    <div class="modal-box" style="max-width: 520px;">
+      <div class="modal-header">
+        <h2 class="modal-title">Keyboard Shortcuts</h2>
+        <button id="shortcuts-modal-close" class="modal-close-btn" aria-label="Close shortcuts dialog">✕</button>
+      </div>
+      <div class="modal-body">
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-subtle);">
+            <span>Open Command Palette</span>
+            <span class="badge badge-gold">⌘ K / Ctrl K</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-subtle);">
+            <span>Open Keyboard Shortcuts</span>
+            <span class="badge badge-gold">?</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-subtle);">
+            <span>Close Active Modal</span>
+            <span class="badge badge-gold">ESC</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span>Navigate Results</span>
+            <span class="badge badge-gold">↑ / ↓</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Master JavaScript Application -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

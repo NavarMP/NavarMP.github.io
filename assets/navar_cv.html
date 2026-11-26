@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammed Navar — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0f0f0f;
+    --ink-muted: #4a4a4a;
+    --ink-light: #8a8a8a;
+    --rule: #d8d0c8;
+    --rule-light: #ede8e2;
+    --warm-white: #faf8f5;
+    --accent: #1a3a5c;
+    --accent-warm: #8b4513;
+    --highlight: #c8b89a;
+    --gold: #b8860b;
+    --page-w: 210mm;
+    --page-h: 297mm;
+  }
+
+  html, body {
+    background: #e8e4de;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: var(--page-w);
+    min-height: var(--page-h);
+    background: var(--warm-white);
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 60px rgba(0,0,0,0.18), 0 2px 12px rgba(0,0,0,0.08);
+  }
+
+  /* ── DECORATIVE ELEMENTS ── */
+  .page::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 72mm;
+    height: 100%;
+    background: linear-gradient(180deg, #0f1e30 0%, #1a3a5c 60%, #0d2440 100%);
+    z-index: 0;
+  }
+
+  .corner-ornament {
+    position: absolute;
+    top: 0; left: 72mm;
+    width: 0; height: 0;
+    border-left: 12px solid #1a3a5c;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    z-index: 2;
+    top: 22mm;
+  }
+
+  .gold-line {
+    position: absolute;
+    top: 0; left: 70mm;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent 0%, var(--gold) 15%, var(--gold) 85%, transparent 100%);
+    opacity: 0.5;
+    z-index: 1;
+  }
+
+  /* ── LEFT COLUMN ── */
+  .left-col {
+    position: absolute;
+    top: 0; left: 0;
+    width: 72mm;
+    padding: 10mm 7mm 10mm 8mm;
+    z-index: 1;
+    color: #fff;
+  }
+
+  /* Photo */
+  .photo-wrap {
+    width: 42mm;
+    height: 42mm;
+    margin: 0 auto 6mm;
+    position: relative;
+  }
+  .photo-wrap::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold) 0%, transparent 60%);
+    opacity: 0.7;
+  }
+  .photo-wrap img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    position: relative;
+    z-index: 1;
+    border: 2px solid rgba(255,255,255,0.15);
+  }
+
+  /* Name block */
+  .left-name {
+    text-align: center;
+    margin-bottom: 5mm;
+  }
+  .left-name h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 18pt;
+    line-height: 1.15;
+    color: #fff;
+    letter-spacing: 0.02em;
+  }
+  .left-name .title-tag {
+    display: inline-block;
+    margin-top: 2mm;
+    font-family: 'DM Mono', monospace;
+    font-size: 6pt;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(184,134,11,0.12);
+    padding: 1.5mm 3mm;
+    border: 1px solid rgba(184,134,11,0.3);
+  }
+
+  /* Divider */
+  .left-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(184,134,11,0.5), transparent);
+    margin: 4mm 0;
+  }
+
+  /* Left sections */
+  .left-section {
+    margin-bottom: 5mm;
+  }
+  .left-section-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 5.5pt;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 3mm;
+    display: flex;
+    align-items: center;
+    gap: 2mm;
+  }
+  .left-section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(184,134,11,0.3);
+  }
+
+  /* Contact items */
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5mm;
+    margin-bottom: 2.5mm;
+    font-size: 7.5pt;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.4;
+  }
+  .contact-icon {
+    width: 3.5mm;
+    height: 3.5mm;
+    margin-top: 0.5mm;
+    flex-shrink: 0;
+    opacity: 0.7;
+  }
+  .contact-item a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+  }
+  .contact-item a:hover { color: var(--gold); }
+
+  /* Skill bars */
+  .skill-item {
+    margin-bottom: 2mm;
+  }
+  .skill-label {
+    font-size: 7pt;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 1mm;
+    display: flex;
+    justify-content: space-between;
+  }
+  .skill-bar-track {
+    height: 1.5px;
+    background: rgba(255,255,255,0.12);
+    position: relative;
+  }
+  .skill-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold), #e8c96a);
+  }
+
+  /* Skill tags */
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5mm;
+  }
+  .skill-tag {
+    font-size: 6pt;
+    font-family: 'DM Mono', monospace;
+    color: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 1mm 2mm;
+    letter-spacing: 0.05em;
+  }
+
+  /* Language */
+  .lang-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2mm;
+  }
+  .lang-name {
+    font-size: 7.5pt;
+    color: rgba(255,255,255,0.85);
+  }
+  .lang-dots {
+    display: flex;
+    gap: 1mm;
+  }
+  .lang-dot {
+    width: 2.5mm;
+    height: 2.5mm;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(184,134,11,0.4);
+  }
+  .lang-dot.filled {
+    background: var(--gold);
+    border-color: var(--gold);
+  }
+
+  /* ── RIGHT COLUMN ── */
+  .right-col {
+    position: absolute;
+    top: 0;
+    left: 72mm;
+    right: 0;
+    padding: 9mm 9mm 9mm 10mm;
+    z-index: 1;
+  }
+
+  /* Header stripe */
+  .right-header {
+    margin-bottom: 6mm;
+    padding-bottom: 5mm;
+    border-bottom: 1px solid var(--rule);
+  }
+  .right-header .greeting {
+    font-family: 'DM Mono', monospace;
+    font-size: 6pt;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 1.5mm;
+  }
+  .right-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22pt;
+    font-weight: 500;
+    color: var(--accent);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .right-header h2 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--ink-muted);
+  }
+
+  /* Section */
+  .r-section {
+    margin-bottom: 5.5mm;
+  }
+  .r-section-head {
+    display: flex;
+    align-items: center;
+    gap: 2mm;
+    margin-bottom: 3mm;
+  }
+  .r-section-head .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 9pt;
+    font-style: italic;
+    color: var(--highlight);
+  }
+  .r-section-head h3 {
+    font-family: 'DM Mono', monospace;
+    font-size: 6pt;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .r-section-head::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule-light);
+  }
+
+  /* Summary */
+  .summary-text {
+    font-size: 8pt;
+    line-height: 1.8;
+    color: var(--ink-muted);
+    font-weight: 300;
+  }
+  .summary-text strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* Skills grid */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3mm 5mm;
+  }
+  .skill-group-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 5.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    margin-bottom: 1.5mm;
+    padding-bottom: 1mm;
+    border-bottom: 1px solid var(--rule-light);
+  }
+  .skill-list {
+    list-style: none;
+  }
+  .skill-list li {
+    font-size: 7pt;
+    color: var(--ink-muted);
+    padding: 0.8mm 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5mm;
+  }
+  .skill-list li::before {
+    content: '▸';
+    color: var(--gold);
+    font-size: 6pt;
+    flex-shrink: 0;
+  }
+
+  /* Projects */
+  .project-item {
+    margin-bottom: 4mm;
+    padding-left: 3mm;
+    border-left: 1.5px solid var(--rule-light);
+    position: relative;
+  }
+  .project-item::before {
+    content: '';
+    position: absolute;
+    left: -3px;
+    top: 2mm;
+    width: 4px;
+    height: 4px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+  .project-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 10pt;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1.2;
+  }
+  .project-stack {
+    font-family: 'DM Mono', monospace;
+    font-size: 5.5pt;
+    color: var(--highlight);
+    letter-spacing: 0.1em;
+    margin: 0.8mm 0 1mm;
+    text-transform: uppercase;
+  }
+  .project-desc {
+    font-size: 7pt;
+    color: var(--ink-muted);
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  /* Experience */
+  .exp-item {
+    margin-bottom: 3mm;
+  }
+  .exp-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1mm;
+  }
+  .exp-role {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 10pt;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .exp-period {
+    font-family: 'DM Mono', monospace;
+    font-size: 5.5pt;
+    color: var(--ink-light);
+    letter-spacing: 0.05em;
+  }
+  .exp-org {
+    font-size: 7.5pt;
+    color: var(--gold);
+    margin-bottom: 1mm;
+    font-style: italic;
+  }
+  .exp-desc {
+    font-size: 7pt;
+    color: var(--ink-muted);
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  /* Education */
+  .edu-item {
+    display: flex;
+    gap: 3mm;
+    align-items: flex-start;
+  }
+  .edu-icon-wrap {
+    width: 7mm;
+    height: 7mm;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.5mm;
+  }
+  .edu-icon-wrap svg {
+    width: 4mm;
+    height: 4mm;
+    fill: #fff;
+  }
+  .edu-degree {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 10pt;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .edu-univ {
+    font-size: 7.5pt;
+    color: var(--ink-muted);
+    margin-top: 0.5mm;
+  }
+  .edu-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 5.5pt;
+    color: var(--ink-light);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 1mm;
+  }
+
+  /* Strengths */
+  .strengths-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2mm;
+  }
+  .strength-item {
+    background: linear-gradient(135deg, #f0ece6 0%, #faf8f5 100%);
+    border: 1px solid var(--rule-light);
+    padding: 2.5mm 3mm;
+    display: flex;
+    align-items: center;
+    gap: 2mm;
+  }
+  .strength-dot {
+    width: 2mm;
+    height: 2mm;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .strength-text {
+    font-size: 6.5pt;
+    color: var(--ink-muted);
+    line-height: 1.4;
+  }
+
+  /* Footer */
+  .cv-footer {
+    position: absolute;
+    bottom: 0;
+    left: 72mm;
+    right: 0;
+    padding: 3mm 9mm;
+    border-top: 1px solid var(--rule-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cv-footer span {
+    font-family: 'DM Mono', monospace;
+    font-size: 5pt;
+    color: var(--ink-light);
+    letter-spacing: 0.1em;
+  }
+
+  /* Left footer */
+  .left-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 72mm;
+    padding: 3mm 8mm;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    z-index: 2;
+  }
+  .left-footer span {
+    font-family: 'DM Mono', monospace;
+    font-size: 5pt;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 0.1em;
+    display: block;
+    text-align: center;
+  }
+
+  @media print {
+    html, body { background: none; }
+    .page {
+      margin: 0;
+      box-shadow: none;
+      width: 210mm;
+      min-height: 297mm;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="gold-line"></div>
+
+  <!-- ═══ LEFT COLUMN ═══ -->
+  <div class="left-col">
+
+    <!-- Photo -->
+    <div class="photo-wrap">
+      <img src="Portrait.png" alt="Muhammed Navar">
+    </div>
+
+    <!-- Name -->
+    <div class="left-name">
+      <h1>Muhammed<br>Navar</h1>
+      <span class="title-tag">Web Dev · Design</span>
+    </div>
+
+    <div class="left-divider"></div>
+
+    <!-- Contact -->
+    <div class="left-section">
+      <div class="left-section-title">Contact</div>
+
+      <div class="contact-item">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+        </svg>
+        Kerala, India
+      </div>
+
+      <div class="contact-item">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
+        </svg>
+        <a href="https://navarmp.digibayt.com">navarmp.digibayt.com</a>
+      </div>
+
+      <div class="contact-item">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+        </svg>
+        <a href="https://github.com/NavarMP">github.com/NavarMP</a>
+      </div>
+    </div>
+
+    <div class="left-divider"></div>
+
+    <!-- Core Skills -->
+    <div class="left-section">
+      <div class="left-section-title">Web Dev</div>
+      <div class="skill-item">
+        <div class="skill-label"><span>HTML / CSS / SCSS</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" style="width:95%"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>JavaScript</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" style="width:85%"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>React.js</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" style="width:82%"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Next.js</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" style="width:80%"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>API Integration</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" style="width:75%"></div></div>
+      </div>
+    </div>
+
+    <div class="left-divider"></div>
+
+    <!-- Design Skills -->
+    <div class="left-section">
+      <div class="left-section-title">Design</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Illustrator</span>
+        <span class="skill-tag">Photoshop</span>
+        <span class="skill-tag">Figma</span>
+        <span class="skill-tag">UI Design</span>
+        <span class="skill-tag">Branding</span>
+        <span class="skill-tag">Typography</span>
+        <span class="skill-tag">Poster Design</span>
+        <span class="skill-tag">Layout</span>
+      </div>
+    </div>
+
+    <div class="left-divider"></div>
+
+    <!-- Tools -->
+    <div class="left-section">
+      <div class="left-section-title">Tools</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Git / GitHub</span>
+        <span class="skill-tag">Vercel</span>
+        <span class="skill-tag">Supabase</span>
+        <span class="skill-tag">Linux</span>
+        <span class="skill-tag">VS Code</span>
+        <span class="skill-tag">GSAP</span>
+      </div>
+    </div>
+
+    <div class="left-divider"></div>
+
+    <!-- Languages -->
+    <div class="left-section">
+      <div class="left-section-title">Languages</div>
+      <div class="lang-item">
+        <span class="lang-name">English</span>
+        <div class="lang-dots">
+          <div class="lang-dot filled"></div><div class="lang-dot filled"></div><div class="lang-dot filled"></div><div class="lang-dot filled"></div><div class="lang-dot"></div>
+        </div>
+      </div>
+      <div class="lang-item">
+        <span class="lang-name">Malayalam</span>
+        <div class="lang-dots">
+          <div class="lang-dot filled"></div><div class="lang-dot filled"></div><div class="lang-dot filled"></div><div class="lang-dot filled"></div><div class="lang-dot filled"></div>
+        </div>
+      </div>
+      <div class="lang-item">
+        <span class="lang-name">Arabic</span>
+        <div class="lang-dots">
+          <div class="lang-dot filled"></div><div class="lang-dot filled"></div><div class="lang-dot"></div><div class="lang-dot"></div><div class="lang-dot"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="left-footer">
+      <span>CURRICULUM VITAE · 2026</span>
+    </div>
+  </div>
+  <!-- end left col -->
+
+
+  <!-- ═══ RIGHT COLUMN ═══ -->
+  <div class="right-col">
+
+    <!-- Header -->
+    <div class="right-header">
+      <div class="greeting">Portfolio · Kerala, India</div>
+      <h2>Web Developer<br><em>& Graphic Designer</em></h2>
+    </div>
+
+    <!-- Summary -->
+    <div class="r-section">
+      <div class="r-section-head">
+        <span class="num">01</span>
+        <h3>Profile</h3>
+      </div>
+      <p class="summary-text">
+        A <strong>creative technologist</strong> who bridges the gap between engineering precision and visual artistry. With a foundation in modern web technologies and a refined eye for design, I craft <strong>digital products that perform as beautifully as they look</strong> — from full-stack Next.js applications to polished brand identities.<br><br>
+        As a <strong>freelance designer and developer</strong>, I have delivered end-to-end solutions for clients — translating ideas into pixel-perfect interfaces and production-ready code. Driven by a deep passion for <strong>UI/UX thinking</strong>, clean architecture, and the intersection of aesthetics and function.
+      </p>
+    </div>
+
+    <!-- Projects -->
+    <div class="r-section">
+      <div class="r-section-head">
+        <span class="num">02</span>
+        <h3>Featured Projects</h3>
+      </div>
+
+      <div class="project-item">
+        <div class="project-name">Arivolam — Educational Platform</div>
+        <div class="project-stack">Next.js · Supabase · Auth · RBAC</div>
+        <div class="project-desc">An all-in-one educational management platform featuring role-based access control, student management, and authentication. Designed the full system architecture and interface from scratch, optimising for both educator workflows and student experience.</div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-name">Attar al Jannah — E-commerce PWA</div>
+        <div class="project-stack">Next.js 15 · Supabase · Razorpay · GSAP</div>
+        <div class="project-desc">A premium progressive web app for an attar brand featuring Islamic-inspired glassmorphism UI, GSAP animations, custom typography, integrated Razorpay payments, and a student sales challenge system — blending spiritual aesthetic with high-performance commerce.</div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-name">Personal Portfolio — navarmp.digibayt.com</div>
+        <div class="project-stack">Modern Frontend · Admin Dashboard · Responsive</div>
+        <div class="project-desc">A curated showcase of web and design work, built with modern frontend technologies. Demonstrates design sensibility alongside engineering capability.</div>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="r-section">
+      <div class="r-section-head">
+        <span class="num">03</span>
+        <h3>Freelance Experience</h3>
+      </div>
+      <div class="exp-item">
+        <div class="exp-head">
+          <span class="exp-role">Graphic Designer</span>
+          <span class="exp-period">2022 — Present</span>
+        </div>
+        <div class="exp-org">Independent Freelance · Kerala, India</div>
+        <div class="exp-desc">Delivered visual design solutions for diverse clients — including event posters, promotional flyers, social media graphics, and branding elements. Known for striking compositions, cohesive colour palettes, and on-time delivery. Managed end-to-end creative briefs independently.</div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="r-section">
+      <div class="r-section-head">
+        <span class="num">04</span>
+        <h3>Education</h3>
+      </div>
+      <div class="edu-item">
+        <div class="edu-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+        </div>
+        <div>
+          <div class="edu-degree">Bachelor of Computer Applications (2023 - 2026)</div>
+          <div class="edu-univ">SAFI Institute of Advanced Study, Vazhayur</div>
+          <div class="edu-note">Calicut University, Kerala</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Strengths -->
+    <div class="r-section">
+      <div class="r-section-head">
+        <span class="num">05</span>
+        <h3>Core Strengths</h3>
+      </div>
+      <div class="strengths-grid">
+        <div class="strength-item">
+          <div class="strength-dot"></div>
+          <span class="strength-text">Full-cycle design-to-development</span>
+        </div>
+        <div class="strength-item">
+          <div class="strength-dot"></div>
+          <span class="strength-text">Strong visual & UI/UX instincts</span>
+        </div>
+        <div class="strength-item">
+          <div class="strength-dot"></div>
+          <span class="strength-text">Rapid technology adoption</span>
+        </div>
+        <div class="strength-item">
+          <div class="strength-dot"></div>
+          <span class="strength-text">Detail-oriented problem solving</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="cv-footer">
+      <span>MUHAMMED NAVAR · WEB DEVELOPER & GRAPHIC DESIGNER</span>
+      <span>navarmp.digibayt.com</span>
+    </div>
+
+  </div>
+  <!-- end right col -->
+
+</div>
+
+</body>
+</html>
