@@ -102,7 +102,7 @@ export const projectsData = [
     badge: 'Behance Curated',
     stack: ['Adobe Illustrator', 'Adobe Photoshop', 'Figma', 'Typography', 'Prepress'],
     summary: 'A curated collection of event posters, visual branding systems, social media graphics, and typographic compositions crafted for academic, commercial, and cultural institutions.',
-    overview: 'With over four years of dedicated freelance practice in Kerala, Muḥammed Navār has delivered striking visual communication systems that balance modern geometric minimalism with rich, culturally resonant typography (English, Malayalam, and Arabic).',
+    overview: 'With over four years of dedicated freelance practice in Kerala, Muhammed Navar has delivered striking visual communication systems that balance modern geometric minimalism with rich, culturally resonant typography (English, Malayalam, and Arabic).',
     challenges: [
       'Harmonizing complex multilingual typographic scripts without sacrificing compositional balance or hierarchy.',
       'Meeting tight event turnaround times while maintaining strict prepress color accuracy (CMYK) and digital brand consistency.'

@@ -27,7 +27,7 @@ export function initContact() {
   if (whatsappQuickBtn) {
     whatsappQuickBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      const message = encodeURIComponent('Hello Muḥammed, I visited your portfolio (NavarMP.github.io) and would like to discuss a project commission.');
+      const message = encodeURIComponent('Hello Muhammed, I visited your portfolio (NavarMP.github.io) and would like to discuss a project commission.');
       window.open(`https://api.whatsapp.com/send?phone=919746902268&text=${message}`, '_blank', 'noopener,noreferrer');
     });
   }
@@ -40,8 +40,8 @@ export function initContact() {
 
       const vcardData = `BEGIN:VCARD
 VERSION:3.0
-N:Navār;Muḥammed;;;
-FN:Muḥammed Navār
+N:Navar;Muhammed;;;
+FN:Muhammed Navar
 NICKNAME:NavarMP
 ORG:Freelance Web Development & Design
 TITLE:Creative Technologist & Full-Stack Developer
